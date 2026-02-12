@@ -28,7 +28,8 @@ Ik startte ook met een eenvoudige HTML-structuur.
 ### Woensdag
 Op deze dag begon ik in Figma te schetsen welke elementen ik nodig had en hoe ik ze wilde verdelen op de pagina. In deze fase was ik nog heel enthousiast.
 Ik vond het leuk om het idee te hebben om mezelf te tekenen, omdat ik vaak video’s zie over tekenen met CSS. Maar dat bleek te moeilijk voor mij en de tijd was te kort. Daarom besloot ik een SVG te maken in Figma en later de onderdelen te proberen te animeren.
-We hadden ook een workshop over View Transitions met Cyd. Het was interessant, maar ook lastig. Zonder dat de docent de code stap voor stap voordoet, vond ik het moeilijk om het meteen zelf toe te passen.
+We h![Uploading crochet-patron.svg…]()
+adden ook een workshop over View Transitions met Cyd. Het was interessant, maar ook lastig. Zonder dat de docent de code stap voor stap voordoet, vond ik het moeilijk om het meteen zelf toe te passen.
 
 ### Donderdag
 Ik begon meer te werken met CSS en probeerde verschillende dingen uit, maar ik was niet echt tevreden. Ik begon te twijfelen of mijn idee wel goed genoeg was en of het niet te moeilijk was voor mijn niveau.
