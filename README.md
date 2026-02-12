@@ -24,6 +24,10 @@ Ik koos uiteindelijk drie leerdoelen:
 - Samen ontwerpen  
 
 Ik startte ook met een eenvoudige HTML-structuur.
+<img width="1600" height="1166" alt="image" src="https://github.com/user-attachments/assets/8fd93724-88d8-4fc4-bfb3-8ebdcde75818" />
+
+<img width="1600" height="1172" alt="image" src="https://github.com/user-attachments/assets/ac65a07c-f44e-4842-a67d-a658f5c87c2a" />
+
 
 ### Woensdag
 Op deze dag begon ik in Figma te schetsen welke elementen ik nodig had en hoe ik ze wilde verdelen op de pagina. In deze fase was ik nog heel enthousiast.
@@ -66,6 +70,8 @@ Ik werkte verder aan mijn website en had een basis klaar, daarna kreeg ik feedba
 ### Dinsdag
 k bleef thuis om rustig na te denken over een nieuwe richting. Ik besloot iets simpelers te maken dat echt persoonlijk bij mij past, omdat dat een belangrijk punt was in de feedback.
 Ik begon opnieuw met een basis en probeerde het persoonlijker te maken.
+<img width="900" height="1600" alt="image" src="https://github.com/user-attachments/assets/e0477502-ad28-4f4d-a335-0e8b631c7c16" />
+<img width="1600" height="1128" alt="image" src="https://github.com/user-attachments/assets/da220381-cc59-4b7d-899a-320677b636d0" />
 <img width="377" height="663" alt="Scherm­afbeelding 2026-02-10 om 17 25 02" src="https://github.com/user-attachments/assets/08004f0a-12b7-40b5-b5c7-5606d68f6c4c" />
 
 ### Woensdag
