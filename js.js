@@ -50,5 +50,5 @@ async function haalHakenBuddiesOp() {
 }
 haalHakenBuddiesOp();
 // ik had errors hier dus heb het opgelost met gpt:
-// https://chatgpt.com/c/698cd8e9-2f78-8388-9f91-9564a0b27ac2
+// https://chatgpt.com/share/698d4701-4e98-8009-9721-93b1e51644ff
 
