@@ -7,6 +7,12 @@
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
+/* * { outline: 1px solid red; } */
+
 body.dark {
     --main-color: #181414;
     --secondary-color: #2f2321;
@@ -22,6 +28,7 @@ body {
     padding: 0;
     background-color: var(--main-color);
     font-family: 'Fredoka', sans-serif;
+    overflow-x: hidden;
 }
 
 /* header */
@@ -91,8 +98,8 @@ main section:nth-of-type(1) {
 }
 
 main section:nth-of-type(1) div:nth-of-type(1) {
-    width: 16em;
-    height: 16em;
+    width: 20em;
+    height: 20em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -170,28 +177,51 @@ main section:nth-of-type(2) {
     display: flex;
     justify-content: center;
     align-items: center;
+
     flex-direction: column;
-    padding: 1em 2em;
+    padding: 1em 0;
+    /* padding-bottom: 5em; */
     background-color: var(--secondary-color);
 
 
+
+
 }
 
-main section:nth-of-type(2) div div:nth-of-type(1) {
-    width: 140px;
+main section:nth-of-type(2) .warp-gallery>div:first-child {
+    /* width: 140px; */
+    width: min(200px, 60vw);
     height: auto;
-    padding: 1em 0 0.25em;
-    margin: 3em 3em 0 3em;
+    margin-top: 3em;
+    display: grid;
+    place-items: center;
+    margin-bottom: 2rem;
+    /* padding: 1em 0 0.25em; */
+    /* margin: 3em 3em 0 3em; */
+    /* margin: 3em auto 0; */
 }
 
 main section:nth-of-type(2) div div:nth-of-type(1) svg {
+    width: 100%;
+    height: auto;
+    display: block;
     color: var(--main-color);
     border-radius: 50%;
     box-shadow: 0em 0em 0.2em 0.2em #d4d08f8a;
 }
 
+.warp-gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
 .crochet-gallery {
     position: relative;
+    width: 100%;
 }
 
 .crochet-gallery::before {
@@ -210,6 +240,7 @@ main section:nth-of-type(2) div div:nth-of-type(1) svg {
 }
 
 .crochet-gallery ul {
+    width: 100%;
     position: relative;
     display: flex;
     justify-content: center;
@@ -217,14 +248,17 @@ main section:nth-of-type(2) div div:nth-of-type(1) svg {
     flex-direction: column;
     flex-wrap: wrap;
     gap: 3em;
-    padding: 1em;
+    padding: 0;
     z-index: 1;
+    margin: 0;
 }
 
 .crochet-gallery ul li {
     list-style: none;
-    width: auto;
-    height: 18em;
+    /* width: 100%; */
+    width: min(100%, 18rem);
+    height: auto;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -236,8 +270,9 @@ main section:nth-of-type(2) div div:nth-of-type(1) svg {
 }
 
 .crochet-gallery ul li img {
-    width: 16em;
-    height: 16em;
+    width: min(16em, 100%);
+    height: auto;
+    aspect-ratio: 1 / 1;
     border-radius: 1em;
     object-fit: cover;
     object-position: center;
@@ -351,11 +386,77 @@ footer p {
     color: var(--text-color);
 
 }
+.crochet-gallery li:nth-child(1) {
+  animation: swing-right 2.5s ease-in-out infinite 0.5s alternate;
+}
 
-@media (min-width: 900px) {
-    
+.crochet-gallery li:nth-child(2) {
+  animation: swing-left 2.5s ease-in-out infinite 0.5s alternate;
+}
 
-    main section:nth-of-type(1){
+.crochet-gallery li:nth-child(3) {
+  animation: swing-soft 2.5s ease-in-out infinite 0.5s alternate;
+}
+.crochet-gallery li:nth-child(4) {
+    animation: swing-right 2.5s ease-in-out infinite 0.5s alternate;
+}
+
+.crochet-gallery li:nth-child(5) {
+    animation: swing-left 2.5s ease-in-out infinite 0.5s alternate;
+
+}
+
+.crochet-gallery li:nth-child(6) {
+    animation: swing-soft 2.5s ease-in-out infinite 0.5s alternate;
+}
+
+@keyframes swing-right {
+    0% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+@keyframes swing-left {
+    0% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes swing-soft {
+    0% {
+        transform: rotate(1deg);
+    }
+
+    50% {
+        transform: rotate(-1deg);
+    }
+
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+@media (min-width: 1200px) {
+
+
+
+    main section:nth-of-type(1) {
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -365,116 +466,169 @@ footer p {
 
 
     }
-    main section:nth-of-type(1) div:nth-of-type(1){
+
+    main section:nth-of-type(1) div:nth-of-type(1) {
         width: 18em;
         height: 18em;
     }
-    main section:nth-of-type(1) div:nth-of-type(2){
+
+    main section:nth-of-type(1) div:nth-of-type(2) {
         align-items: flex-start;
         max-width: 500px;
-        
+
     }
-    main section:nth-of-type(1) div:nth-of-type(2) h1{
-         font-size: 2em;
+
+    main section:nth-of-type(1) div:nth-of-type(2) h1 {
+        font-size: 2em;
     }
-    main section:nth-of-type(1) div:nth-of-type(2) h3{
-         font-size: 1.5em;
+
+    main section:nth-of-type(1) div:nth-of-type(2) h3 {
+        font-size: 1.5em;
     }
-    main section:nth-of-type(1) div:nth-of-type(2) p{
+
+    main section:nth-of-type(1) div:nth-of-type(2) p {
         text-align: left;
         font-size: 1.1em;
     }
 
-    main section:nth-of-type(2)>div {
+    /* main section:nth-of-type(2)>div {
         position: relative;
         width: 100%;
         max-width: 900px;
         min-height: 650px;
         margin: auto;
 
-    }
+    } */
 
-    main section:nth-of-type(2)>div>div:nth-of-type(1) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        z-index: 2;
-        transform: translate(-50%, -50%);
-    }
+    /* main section:nth-of-type(2){
+        align-items: stretch;
+    } */
     .crochet-gallery::before {
         display: none;
 
     }
-    .crochet-gallery ul {
+
+    .warp-gallery {
+        width: 100%;
         position: relative;
-        height: 650px;
-        display: block;
-        gap: 0;
+        gap: 3em;
+        margin: 0 auto;
+        max-width: 900px;
+        height: 800px;
+        overflow: visible;
+    }
+
+    main section:nth-of-type(2) .warp-gallery>div:nth-of-type(1) {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        margin: 0;
+    }
+
+    .crochet-gallery {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+    }
+
+    .crochet-gallery ul {
+        display: block !important;
+        position: relative;
+        width: 100%;
+        height: 100%;
         padding: 0;
         margin: 0;
 
     }
-    .crochet-gallery ul li img {
-        width: 10em;
-        height: 10em;
-        margin: 0;
-    }
 
     .crochet-gallery ul li {
         position: absolute;
-        width: 12em;
-        height: 12em;
-        padding-top: 0.7em;
+        width: clamp(9rem, 12vw, 12rem);
+        height: auto;
+        padding: 0.7em;
         margin: 0;
     }
 
-    .crochet-gallery ul li:nth-child(1) {
-        top: -10%;
+    .crochet-gallery ul li img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        border-radius: 1em;
+    }
+
+
+    .crochet-gallery ul li:nth-of-type(1) {
         left: 50%;
-        transform: translateX(-50%);
+        top: 10%;
+        translate: -50% -50%;
     }
-    .crochet-gallery ul li:nth-child(2) {
-        top: -5%;
-        right: -10%;
+
+    .crochet-gallery ul li:nth-of-type(2) {
+        left: 80%;
+        top: 25%;
+        translate: -50% -50%
     }
-    .crochet-gallery ul li:nth-child(3) {
-        bottom: 17%;
-        right: -10%;
+
+    .crochet-gallery ul li:nth-of-type(3) {
+        left: 82%;
+        top: 65%;
+        translate: -50% -50%;
     }
-    .crochet-gallery ul li:nth-child(4) {
-        bottom: -2%;
-        left: 40%;
+
+    .crochet-gallery ul li:nth-of-type(4) {
+        left: 50%;
+        top: 85%;
+        translate: -50% -50%;
+    }
+
+    .crochet-gallery ul li:nth-of-type(5) {
+        left: 18%;
+        top: 65%;
+        translate: -50% -50%;
+    }
+
+    .crochet-gallery ul li:nth-of-type(6) {
+        left: 20%;
+        top: 25%;
+        translate: -50% -50%;
+    }
+    main section:nth-of-type(2) h2 {
+        margin: 0 ;
+        padding: 0 2rem;
+    }
+    
+
+    main section:nth-of-type(2) h2,
+    section:nth-of-type(3) h2 {
+        align-self: flex-start;
+        text-align: left;
+
 
     }
-    .crochet-gallery ul li:nth-child(5) {
-        bottom: 65%;
-        left: -10%;
-    }
-    .crochet-gallery ul li:nth-child(6) {
-        top: 50%;
-        left: -10%;
-    }
-    main section:nth-of-type(2) ,section:nth-of-type(3) h2{
-        align-items: flex-start;
-        text-align: left;
-    }
-    .leerdoel{
+
+    .leerdoel {
         width: 18em;
     }
-    main section:nth-of-type(3){
-        align-items: flex-start;
-    }
 
-    main section:nth-of-type(3) ul{
+    /* main section:nth-of-type(3){
+        align-items: flex-start;
+    } */
+
+    main section:nth-of-type(3) ul {
         flex-direction: row;
         justify-content: center;
         gap: 4em;
 
     }
+
     main section:nth-of-type(4) ul {
-        
+
         max-width: 600px;
         margin: 0 auto;
         display: grid;

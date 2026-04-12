@@ -116,3 +116,19 @@ Oriënteren en begrijpen
 
 Samen ontwerpen
 → Ik wil beter leren samenwerken en communiceren binnen een team.
+
+## Feedback van medestudenten
+ Jean Carlos
+ * Het algemene ontwerp werd positief ontvangen.
+ * Er werd opgemerkt dat er relatief veel code aanwezig is.
+ * De responsiveness kan nog verder verbeterd worden.
+ * Bij het onderdeel met de leerdoelen werd aangegeven dat deze nu alleen benoemd worden.
+
+Mila
+* Over het algemeen een goed resultaat.
+* De responsiveness kan nog beter uitgewerkt worden.
+* Sommige afbeeldingen vallen buiten hun container; dit kan netter opgelost worden zodat alles binnen de box blijft.
+* Suggesties voor extra interactie en animatie:
+   * Meer animatie toevoegen aan de character (bijv. bewegende ogen).
+   * Kleine visuele effecten zoals kleurveranderingen.
+   * Afbeeldingen kunnen subtiel bewegen (bijv. alsof ze hangen en licht schommelen).

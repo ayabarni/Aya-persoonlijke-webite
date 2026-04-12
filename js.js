@@ -39,7 +39,7 @@ async function haalHakenBuddiesOp() {
 		const html = `
 			<li class="buddy-crochet">
 				<div class="avatar">  <img src="${person.avatar}" alt="${person.name}">
-</div>
+                </div>
 				<p class="name-buddy">${person.name ?? ""}</p>
 			</li>`;
 		list.insertAdjacentHTML("beforeend", html);
