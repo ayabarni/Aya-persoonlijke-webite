@@ -11,11 +11,10 @@
     box-sizing: border-box;
 }
 
-/* * { outline: 1px solid red; } */
-
 body.dark {
     --main-color: #181414;
-    --secondary-color: #2f2321;
+    /* --secondary-color: #2f2321; */
+    --secondary-color: #5f4843;
     --text-color: #f5eee8;
     --box-image-backgrounf-color: #221b19;
     --dolen-background-color: #2f2321;
@@ -36,16 +35,13 @@ header {
     position: relative;
     width: auto;
     top: -2em;
-
-    /* height: auto; */
-
-    /* margin: 0;
-    z-index: 10; */
 }
 
 header button {
     position: absolute;
-    /* right: -2em; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 4em;
     height: 3em;
     padding: 0;
@@ -58,8 +54,35 @@ header button {
     box-shadow: rgba(0, 0, 0, 0.18) 4px 5px 0.5em;
 }
 
+/* thema */
 .thema {
     font-size: 1.4rem;
+
+}
+
+.thema span {
+    position: absolute;
+
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.moon-icon {
+    opacity: 1;
+}
+
+.sun-icon {
+    opacity: 0;
+    transform: rotate(-90deg);
+}
+
+body.dark .moon-icon {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+body.dark .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg);
 }
 
 /* main */
@@ -108,7 +131,7 @@ main section:nth-of-type(1) div:nth-of-type(1) {
     margin: 0;
     overflow: hidden;
     background-color: var(--secondary-color);
-    box-shadow: 4px 4px 1em #b79190;
+    box-shadow: 10px 20px 6em #b79190;
 
 }
 
@@ -180,25 +203,16 @@ main section:nth-of-type(2) {
 
     flex-direction: column;
     padding: 1em 0;
-    /* padding-bottom: 5em; */
     background-color: var(--secondary-color);
-
-
-
-
 }
 
 main section:nth-of-type(2) .warp-gallery>div:first-child {
-    /* width: 140px; */
     width: min(200px, 60vw);
     height: auto;
     margin-top: 3em;
     display: grid;
     place-items: center;
     margin-bottom: 2rem;
-    /* padding: 1em 0 0.25em; */
-    /* margin: 3em 3em 0 3em; */
-    /* margin: 3em auto 0; */
 }
 
 main section:nth-of-type(2) div div:nth-of-type(1) svg {
@@ -266,8 +280,8 @@ main section:nth-of-type(2) div div:nth-of-type(1) svg {
     border-radius: 1em;
     padding: 1em;
     background-color: var(--main-color);
-
 }
+
 
 .crochet-gallery ul li img {
     width: min(16em, 100%);
@@ -386,17 +400,19 @@ footer p {
     color: var(--text-color);
 
 }
+
 .crochet-gallery li:nth-child(1) {
-  animation: swing-right 2.5s ease-in-out infinite 0.5s alternate;
+    animation: swing-right 2.5s ease-in-out infinite 0.5s alternate;
 }
 
 .crochet-gallery li:nth-child(2) {
-  animation: swing-left 2.5s ease-in-out infinite 0.5s alternate;
+    animation: swing-left 2.5s ease-in-out infinite 0.5s alternate;
 }
 
 .crochet-gallery li:nth-child(3) {
-  animation: swing-soft 2.5s ease-in-out infinite 0.5s alternate;
+    animation: swing-soft 2.5s ease-in-out infinite 0.5s alternate;
 }
+
 .crochet-gallery li:nth-child(4) {
     animation: swing-right 2.5s ease-in-out infinite 0.5s alternate;
 }
@@ -410,31 +426,32 @@ footer p {
     animation: swing-soft 2.5s ease-in-out infinite 0.5s alternate;
 }
 
+/* animation voor crochetfotos */
 @keyframes swing-right {
     0% {
-        transform: rotate(2deg);
+        transform: rotate(4deg);
     }
 
     50% {
-        transform: rotate(-2deg);
+        transform: rotate(-4deg);
     }
 
     100% {
-        transform: rotate(2deg);
+        transform: rotate(4deg);
     }
 }
 
 @keyframes swing-left {
     0% {
-        transform: rotate(-2deg);
+        transform: rotate(-4deg);
     }
 
     50% {
-        transform: rotate(2deg);
+        transform: rotate(4deg);
     }
 
     100% {
-        transform: rotate(-2deg);
+        transform: rotate(-4deg);
     }
 }
 
@@ -451,6 +468,7 @@ footer p {
         transform: rotate(1deg);
     }
 }
+
 
 @media (min-width: 1200px) {
 
@@ -491,18 +509,6 @@ footer p {
         font-size: 1.1em;
     }
 
-    /* main section:nth-of-type(2)>div {
-        position: relative;
-        width: 100%;
-        max-width: 900px;
-        min-height: 650px;
-        margin: auto;
-
-    } */
-
-    /* main section:nth-of-type(2){
-        align-items: stretch;
-    } */
     .crochet-gallery::before {
         display: none;
 
@@ -598,11 +604,12 @@ footer p {
         top: 25%;
         translate: -50% -50%;
     }
+
     main section:nth-of-type(2) h2 {
-        margin: 0 ;
+        margin: 0;
         padding: 0 2rem;
     }
-    
+
 
     main section:nth-of-type(2) h2,
     section:nth-of-type(3) h2 {
@@ -637,4 +644,5 @@ footer p {
         justify-items: center;
 
     }
+
 }
